@@ -12,14 +12,14 @@ Production-style Azure infrastructure covering networking, compute, storage, AKS
 | 0 | Big Picture + Setup | ✅ Complete |
 | 1 | Portal + CLI + Resource Group | ✅ Complete |
 | 2 | Networking — VNet, Subnet, NSG | 🔄 In Progress |
-| 3 | Compute — Virtual Machine | ⏳ Pending |
-| 4 | Storage — Blob Storage | ⏳ Pending |
-| 5 | Identity — RBAC + Managed Identity | ⏳ Pending |
-| 6 | Security — Key Vault | ⏳ Pending |
-| 7 | Containers — ACR + AKS | ⏳ Pending |
-| 8 | IaC — Bicep Templates | ⏳ Pending |
-| 9 | CI/CD — GitHub Actions | ⏳ Pending |
-| 10 | Monitoring — Azure Monitor | ⏳ Pending |
+| 3 | Compute - Virtual Machine | ⏳ Pending |
+| 4 | Storage - Blob Storage | ⏳ Pending |
+| 5 | Identity - RBAC + Managed Identity | ⏳ Pending |
+| 6 | Security - Key Vault | ⏳ Pending |
+| 7 | Containers - ACR + AKS | ⏳ Pending |
+| 8 | IaC - Bicep Templates | ⏳ Pending |
+| 9 | CI/CD - GitHub Actions | ⏳ Pending |
+| 10 | Monitoring - Azure Monitor | ⏳ Pending |
 
 ## 🛠️ Tech Stack
 
