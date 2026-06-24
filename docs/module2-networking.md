@@ -1,4 +1,4 @@
-# Module 2 — Networking
+# Module 2 - Networking
 
 ## Resources Created
 
