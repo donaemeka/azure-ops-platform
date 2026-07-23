@@ -11,8 +11,8 @@ Production-style Azure infrastructure covering networking, compute, storage, AKS
 |--------|-------|--------|
 | 0 | Big Picture + Setup | ✅ Complete |
 | 1 | Portal + CLI + Resource Group | ✅ Complete |
-| 2 | Networking — VNet, Subnet, NSG | 🔄 In Progress |
-| 3 | Compute - Virtual Machine | ⏳ Pending |
+| 2 | Networking — VNet, Subnet, NSG | ✅ Complete |
+| 3 | Compute - Virtual Machine | ✅ Complete  |
 | 4 | Storage - Blob Storage | ⏳ Pending |
 | 5 | Identity - RBAC + Managed Identity | ⏳ Pending |
 | 6 | Security - Key Vault | ⏳ Pending |
