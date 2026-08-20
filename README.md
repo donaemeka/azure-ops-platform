@@ -40,6 +40,9 @@ Production-style Azure infrastructure covering networking, compute, storage, con
 
 ## Repository Structure
 
+## Repository Structure
+
+```
 azure-ops-platform/
 ├── .github/
 │   └── workflows/
@@ -65,6 +68,7 @@ azure-ops-platform/
 ├── index.html
 ├── LICENSE
 └── README.md
+```
 
 
 ## Author
