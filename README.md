@@ -40,36 +40,28 @@ Production-style Azure infrastructure covering networking, compute, storage, con
 
 ## Repository Structure
 
+
+Remove the word `Repository Structure` that is inside the code block. It should just start with `azure-ops-platform/`:
+
+````markdown
 ## Repository Structure
 
 ```
 azure-ops-platform/
 ├── .github/
-│   └── workflows/
-│       └── deploy.yml
-├── bicep/
-│   └── main.bicep
-├── docs/
-│   ├── module02-networking.md
-│   ├── module03-compute.md
-│   ├── module04-storage.md
-│   ├── module05-identity.md
-│   ├── module06-keyvault.md
-│   ├── module07-containers.md
-│   ├── module08-bicep.md
-│   ├── module09-cicd.md
-│   └── module10-monitoring.md
-├── image/
-│   └── architecture.png
-├── k8s/
-│   └── deployment.yaml
-├── .gitignore
-├── Dockerfile
-├── index.html
-├── LICENSE
-└── README.md
+...
 ```
+````
 
+Save and push:
+
+````bash
+git add README.md
+git commit -m "docs: remove duplicate heading in repo structure"
+git push origin main
+````
+
+---
 
 ## Author
 
