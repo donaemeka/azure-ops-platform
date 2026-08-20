@@ -17,7 +17,7 @@ Production-style Azure infrastructure covering networking, compute, storage, AKS
 | 5 | Identity - RBAC + Managed Identity | ✅ Complete |
 | 6 | Security - Key Vault | ✅ Complete |
 | 7 | Containers - ACR + AKS | ✅ Complete |
-| 8 | IaC - Bicep Templates | ⏳ Pending |
+| 8 | IaC - Bicep Templates | ✅ Complete  |
 | 9 | CI/CD - GitHub Actions | ⏳ Pending |
 | 10 | Monitoring - Azure Monitor | ⏳ Pending |
 
