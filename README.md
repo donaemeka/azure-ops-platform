@@ -38,7 +38,6 @@ Production-style Azure infrastructure covering networking, compute, storage, con
 - Region: East US
 - Subscription: Azure subscription 1
 
-````markdown
 ## Repository Structure
 
 ```
@@ -68,7 +67,6 @@ azure-ops-platform/
 ├── LICENSE
 └── README.md
 ```
-
 
 ## Author
 
