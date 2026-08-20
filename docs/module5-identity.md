@@ -1,63 +1,38 @@
 # Module 5 - Identity and Access Control
 
-## What Was Done
+This module enables a Managed Identity on the VM and assigns RBAC roles so the VM can access storage without storing any credentials in code.
 
-| Action | Detail |
-|--------|--------|
-| Viewed role assignments | Owner at subscription level |
-| Enabled Managed Identity | System-assigned on vm-azureops |
-| Managed Identity ID | a7044a08-dec4-43ad-b019-e62063ee60c5 |
-| Assigned role to VM | Storage Blob Data Reader on stdonatus2606 |
+## Prerequisites
 
-## Key Concepts
+- VM from Module 3
+- Storage account from Module 4
+- Azure CLI logged in
 
-**Microsoft Entra ID**
-Azure identity platform. Manages all users, applications and permissions.
-Previously called Azure Active Directory.
+## Resources
 
-**Service Principal**
-A robot identity for applications and automation. GitHub Actions uses
-a Service Principal to deploy to Azure.
+| Identity | Role | Scope |
+|----------|------|-------|
+| donaemeka92@gmail.com | Storage Blob Data Contributor | stdonatus2606 |
+| vm-azureops Managed Identity | Storage Blob Data Reader | stdonatus2606 |
 
-**Managed Identity**
-A Service Principal that Azure manages automatically. No passwords or
-keys to manage. Two types: system-assigned (tied to one resource) and
-user-assigned (shared across multiple resources).
+## Setup
 
-**RBAC**
-Role Based Access Control. Controls what actions an identity can perform.
-Three parts: who gets the role, what role they get, and where it applies.
-
-**Built-in Roles**
-Owner = full access including permissions management.
-Contributor = create and manage resources but cannot manage permissions.
-Reader = view only, no changes allowed.
-Storage Blob Data Contributor = read and write blobs.
-Storage Blob Data Reader = read blobs only.
-
-**Principle of Least Privilege**
-Give only the minimum permissions needed. If compromised the damage
-is limited. VM gets Reader not Contributor because it only reads files.
-
-**Scope**
-Controls how wide a permission applies. Subscription is widest.
-Resource is narrowest. Always assign at the narrowest scope possible.
-
-## Commands Used
-
-**View Role Assignments at Subscription Level**
+View current role assignments at subscription level:
 
 ```bash
-az role assignment list --subscription "854d3ee4-f355-4fcf-ad11-91b09816ce88" --output table
+az role assignment list \
+  --subscription "854d3ee4-f355-4fcf-ad11-91b09816ce88" \
+  --output table
 ```
 
-**Enable System-assigned Managed Identity on VM**
+Enable System-assigned Managed Identity on the VM. Azure creates an identity automatically and links it to the VM:
 
 ```bash
-az vm identity assign --name vm-azureops --resource-group rg-azureops-platform
+az vm identity assign --name vm-azureops \
+  --resource-group rg-azureops-platform
 ```
 
-**Assign Storage Blob Data Reader to Managed Identity**
+The output returns the Managed Identity ID. Use it to assign the Storage Blob Data Reader role. The VM only needs to read files so Reader is sufficient:
 
 ```bash
 az role assignment create \
@@ -66,7 +41,9 @@ az role assignment create \
   --scope "/subscriptions/854d3ee4-f355-4fcf-ad11-91b09816ce88/resourceGroups/rg-azureops-platform/providers/Microsoft.Storage/storageAccounts/stdonatus2606"
 ```
 
-**Verify Role Assignments on Storage Account**
+## Verify
+
+List all role assignments on the storage account:
 
 ```bash
 az role assignment list \
@@ -76,7 +53,4 @@ az role assignment list \
 
 ## Notes
 
-The VM Managed Identity has Storage Blob Data Reader on the storage
-account. The engineer account has Storage Blob Data Contributor.
-Neither has Owner on storage which means neither can delete the
-storage account through these roles. This is least privilege in practice.
+Managed Identity ID: a7044a08-dec4-43ad-b019-e62063ee60c5. The VM gets Reader not Contributor because it only reads files. If the VM is compromised the attacker can only read — they cannot upload or delete. This is the principle of least privilege. System-assigned Managed Identity is deleted automatically when the VM is deleted.
