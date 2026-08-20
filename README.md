@@ -1,44 +1,69 @@
-# azure-ops-platform
-Production-style Azure infrastructure covering networking, compute, storage, AKS, CI/CD, monitoring and security
+# Azure Ops Platform
 
-## 🏗️ Project Architecture
+Production-style Azure infrastructure covering networking, compute, storage, containers, CI/CD, monitoring and security. Built from scratch using Azure CLI, Bicep IaC and GitHub Actions.
+
+## Project Architecture
 
 ![Azure Ops Platform Architecture](./image/architecture.png)
 
-## 📋 Modules
+## Modules
 
-| Module | Topic | Status |
-|--------|-------|--------|
-| 0 | Big Picture + Setup | ✅ Complete |
-| 1 | Portal + CLI + Resource Group | ✅ Complete |
-| 2 | Networking — VNet, Subnet, NSG | ✅ Complete |
-| 3 | Compute - Virtual Machine | ✅ Complete  |
-| 4 | Storage - Blob Storage | ✅ Complete |
-| 5 | Identity - RBAC + Managed Identity | ✅ Complete |
-| 6 | Security - Key Vault | ✅ Complete |
-| 7 | Containers - ACR + AKS | ✅ Complete |
-| 8 | IaC - Bicep Templates | ✅ Complete  |
-| 9 | CI/CD - GitHub Actions | ✅ Complete |
-| 10 | Monitoring - Azure Monitor | ✅ Complete  |
+| Module | Topic | Docs | Status |
+|--------|-------|------|--------|
+| 0 | Big Picture + Setup | - | ✅ Complete |
+| 1 | Portal + CLI + Resource Group | - | ✅ Complete |
+| 2 | Networking — VNet, Subnet, NSG | [docs](./docs/module02-networking.md) | ✅ Complete |
+| 3 | Compute — Virtual Machine | [docs](./docs/module03-compute.md) | ✅ Complete |
+| 4 | Storage — Blob Storage | [docs](./docs/module04-storage.md) | ✅ Complete |
+| 5 | Identity — RBAC + Managed Identity | [docs](./docs/module05-identity.md) | ✅ Complete |
+| 6 | Security — Key Vault | [docs](./docs/module06-keyvault.md) | ✅ Complete |
+| 7 | Containers — ACR + AKS | [docs](./docs/module07-containers.md) | ✅ Complete |
+| 8 | IaC — Bicep Templates | [docs](./docs/module08-bicep.md) | ✅ Complete |
+| 9 | CI/CD — GitHub Actions | [docs](./docs/module09-cicd.md) | ✅ Complete |
+| 10 | Monitoring — Azure Monitor | [docs](./docs/module10-monitoring.md) | ✅ Complete |
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Cloud:** Microsoft Azure
-- **IaC:** Bicep, Terraform
-- **Containers:** Docker, AKS, ACR
-- **CI/CD:** GitHub Actions
-- **Monitoring:** Azure Monitor, Log Analytics
-- **Security:** Azure Key Vault, RBAC
-- **CLI:** Azure CLI, kubectl
+- Cloud: Microsoft Azure
+- IaC: Bicep
+- Containers: Docker, AKS, ACR
+- CI/CD: GitHub Actions
+- Monitoring: Azure Monitor, Log Analytics
+- Security: Azure Key Vault, RBAC, Managed Identity
+- CLI: Azure CLI, kubectl
 
-## 📦 Azure Resources
+## Azure Resources
 
 - Resource Group: `rg-azureops-platform`
-- Region: West Europe
-- Subscription: Azure for Students
+- Region: East US
+- Subscription: Azure subscription 1
 
-## 👤 Author
+## Repository Structure
 
-**Donatus Emeka Anyalebechi**
+azure-ops-platform/
+├── Dockerfile
+├── index.html
+├── bicep/
+│ └── main.bicep
+├── k8s/
+│ └── deployment.yaml
+├── docs/
+│ ├── module02-networking.md
+│ ├── module03-compute.md
+│ ├── module04-storage.md
+│ ├── module05-identity.md
+│ ├── module06-keyvault.md
+│ ├── module07-containers.md
+│ ├── module08-bicep.md
+│ ├── module09-cicd.md
+│ └── module10-monitoring.md
+└── .github/
+└── workflows/
+└── deploy.yml
+
+
+## Author
+
+Donatus Emeka Anyalebechi
 - GitHub: [github.com/donaemeka](https://github.com/donaemeka)
 - LinkedIn: [linkedin.com/in/donatus-devops](https://linkedin.com/in/donatus-devops)
