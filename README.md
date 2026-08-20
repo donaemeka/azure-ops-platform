@@ -18,8 +18,8 @@ Production-style Azure infrastructure covering networking, compute, storage, AKS
 | 6 | Security - Key Vault | ✅ Complete |
 | 7 | Containers - ACR + AKS | ✅ Complete |
 | 8 | IaC - Bicep Templates | ✅ Complete  |
-| 9 | CI/CD - GitHub Actions | ⏳ Pending |
-| 10 | Monitoring - Azure Monitor | ⏳ Pending |
+| 9 | CI/CD - GitHub Actions | ✅ Complete |
+| 10 | Monitoring - Azure Monitor | ✅ Complete  |
 
 ## 🛠️ Tech Stack
 
