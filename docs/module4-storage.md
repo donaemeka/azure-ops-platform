@@ -12,16 +12,16 @@
 
 ### Storage Account
 Top level container for all storage in Azure. Name must be globally
-unique — it becomes part of the public URL.
+unique - it becomes part of the public URL.
 URL: https://stdonatus2606.blob.core.windows.net/
 
 ### Blob Storage
-Object storage for unstructured data — files, images, videos, backups.
+Object storage for unstructured data - files, images, videos, backups.
 Every file must live inside a container.
 
 ### Container
 A folder inside the storage account. Access can be private or public.
-We use private — only authenticated users can access files.
+We use private -  only authenticated users can access files.
 
 ### LRS (Locally Redundant Storage)
 Azure keeps 3 copies of every file in the same data center.
@@ -33,13 +33,13 @@ Cool = infrequently accessed. Archive = rarely accessed backups.
 
 ### Encryption at Rest
 Every file stored in Azure Blob Storage is automatically encrypted.
-Enabled by default — no configuration needed.
+Enabled by default - no configuration needed.
 
 ### RBAC on Storage
 Being subscription owner is not enough to upload files.
 Must explicitly assign Storage Blob Data Contributor role.
 This separates management permissions from data permissions.
-Principle of least privilege — assign only minimum permissions needed.
+Principle of least privilege - assign only minimum permissions needed.
 
 ## Commands Used
 
